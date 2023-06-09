@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="../../css/style.css">
 		<title>Lesson 02</title>
 	</head>
 	<body>
@@ -14,7 +14,7 @@
 				<h1 class="header__title">Задача №6</h1>
 				</div>
 			</header>
-			<main class="page">
+			<main class="main">
 				<div class="page">
 					<div class="page__container">
 						<ul class="page__list">
@@ -59,21 +59,24 @@
 										<span class ="productone__quantity">${quantityProductOne}</span>
 										<span>x</span>
 										<span class ="productone__price">${priceProductOne}грн</span>
+										<span>....................................</span>${totalCostProductOne}грн
 									</div>
 									<div class='productone'> 
 										<div class='productone__name'>Другий товар</div>
 										<span class ="productone__quantity">${quantityProductTwo}</span>
 										<span>x</span>
 										<span class ="productone__price">${priceProductTwo}грн</span>
+										<span>....................................</span>${totalCostProductTwo}грн
 									</div>
 									<div class='productone'> 
 										<div class='productone__name'>Третiй товар</div>
 										<span class ="productone__quantity">${quantityProductThree}</span>
 										<span>x</span>
 										<span class ="productone__price">${priceProductThree}грн</span>
+										<span>....................................</span>${totalCostProductThree}грн
 									</div>
 								</div>
-								<div class = 'total'>Загальна вартiсть ${totalSum} грн</>
+								<div class = 'total'>Загальна вартiсть ............${totalSum} грн</>
 							</div>
 							
 							`)
@@ -83,6 +86,5 @@
 				</main> 
 
 		</div>
-		<script src="js/script.js"></script>
 	</body>
 </html>
