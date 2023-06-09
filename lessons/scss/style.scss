@@ -1,0 +1,172 @@
+@use "sass:math";
+@import "mixins.scss";
+@import "reset.scss";
+
+
+$mb:rem(100);
+$mmb:rem(50);
+$black:#212529;
+$grey:#495057;
+$lightgrey:rgba(248, 249, 250, 0.5);
+
+
+[class*=__container] {
+		max-width: rem(1270);
+		margin: 0 auto;
+		padding: 0 rem(15);
+	  }
+
+body{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+    font-size: rem(18);
+    line-height:1.67;
+    color: #282828;
+	background: #f3f3f3;
+}
+.wrapper{ 
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.header__container {
+	display: flex;
+	min-height: rem(100);
+	align-items: center;
+	gap: rem(10);
+}
+
+
+.header {
+
+	padding-top: rem(20);
+	padding-bottom: rem(20);
+	// .header__container
+
+	&__container {
+	}
+
+	// .header__title
+
+	&__title {
+		font-size: rem(30);
+		font-weight: 500;
+	}
+}
+
+
+//_____________________
+
+.page {
+
+
+	// .page__list
+
+	&__list {
+	}
+
+	// .page__item
+
+	&__item {
+		
+	}
+}
+.item {
+	
+	
+	padding-bottom: rem(20);
+	padding-top: rem(20);
+	&:not(:last-child) {
+		border-bottom: 1px solid #cecece;
+	}
+
+	// .item__link
+
+	&__link {
+		color: #ff9b10;
+		font-size: rem(24);
+		font-weight: 500;
+		display: block;
+		margin-bottom: rem(15);
+		&:hover{
+			color: #ff7300;
+		}
+	}
+		
+
+	&__answer{
+		color:#ff7300;
+		font-size: rem(24);
+		margin-bottom: rem(15);
+	}
+
+	&__task{
+		color:#ff9b10;
+		font-size: rem(24);
+		margin-bottom: rem(15);
+	}
+
+	// .item__text
+
+	&__text {
+		font-size: rem(20);
+		
+	}
+
+}
+
+.table{
+	font-size: rem(16);
+	color: #606060;
+	font-weight: 400;
+	padding: rem(15);
+	border: 1px solid #000;
+}
+
+.th{
+	
+	padding: rem(10);
+	border: 1px solid #000;
+}
+
+
+
+
+.check {
+	
+	padding: rem(30);
+	border: 1px solid #bbbbbb;
+	max-width: rem(350);
+	// .check__title
+
+	&__title {
+		font-size: rem(30);
+		margin-bottom: rem(5);
+	}
+}
+.products {
+	
+}
+.productone {
+
+	// .productone__name
+
+	&__name {
+	}
+
+	// .productone__quantity
+
+	&__quantity {
+	}
+
+	// .productone__price
+
+	&__price {
+	}
+}
+.total {
+	padding-top: rem(30);
+}

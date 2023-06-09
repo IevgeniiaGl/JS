@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Lesson 02</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №6</h1>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</div>
+							</li>
+
+						
+							
+						</ul>
+						<script class = 'script'>
+							//1. Вводимо необхiднi данi
+							let priceProductOne = parseFloat (prompt('Введiть вартість першого товару', '0'))
+							let quantityProductOne = parseFloat (prompt('Введiть кількість першого товару', '0'))
+
+							let priceProductTwo = parseFloat (prompt('Введiть вартість другого товару', '0'))
+							let quantityProductTwo = parseFloat (prompt('Введiть кількість другого товару', '0'))
+
+							let priceProductThree = parseFloat (prompt('Введiть вартість третього товару', '0'))
+							let quantityProductThree = parseFloat (prompt('Введiть кількість третього товару', '0'))
+							
+							//2. Знаходимо результат
+							let totalCostProductOne = priceProductOne * quantityProductOne
+							let totalCostProductTwo = priceProductTwo * quantityProductTwo
+							let totalCostProductThree = priceProductThree * quantityProductThree
+
+							let totalSum = totalCostProductOne + totalCostProductTwo + totalCostProductThree
+
+							
+
+							
+
+
+							//3.Виводимо результат
+							document.write(` 
+
+							<div class ="check">
+							<div class ="check__title">Ваш чек</div>
+								<div class='products'>
+									<div class='productone'> 
+										<div class='productone__name'>Перший товар</div>
+										<span class ="productone__quantity">${quantityProductOne}</span>
+										<span>x</span>
+										<span class ="productone__price">${priceProductOne}грн</span>
+									</div>
+									<div class='productone'> 
+										<div class='productone__name'>Другий товар</div>
+										<span class ="productone__quantity">${quantityProductTwo}</span>
+										<span>x</span>
+										<span class ="productone__price">${priceProductTwo}грн</span>
+									</div>
+									<div class='productone'> 
+										<div class='productone__name'>Третiй товар</div>
+										<span class ="productone__quantity">${quantityProductThree}</span>
+										<span>x</span>
+										<span class ="productone__price">${priceProductThree}грн</span>
+									</div>
+								</div>
+								<div class = 'total'>Загальна вартiсть ${totalSum} грн</>
+							</div>
+							
+							`)
+
+						</script>
+					</div> 
+				</main> 
+
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>

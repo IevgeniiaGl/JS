@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Lesson 02</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Домашня робота №7</h1>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__link">Задача №7</div>
+								<div class="item__text">Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+							//1. Вводимо необхiднi данi
+				
+							
+							let minmonthNumber = 1
+							let maxmonthNumber = 12
+
+							let mindayNumber = 0
+							let maxdayNumber = 6
+							
+							//2. Знаходимо результат
+							
+							let randommonthNumber = minmonthNumber + Math.floor(Math.random()*(maxmonthNumber-minmonthNumber+1))
+							let randomdayNumber = mindayNumber + Math.floor(Math.random()*(maxdayNumber-mindayNumber+1))
+							let sum = randommonthNumber + randomdayNumber
+
+							//3.Виводимо результат
+							document.write(`Випадковий номер місяця
+							${randommonthNumber}<br>
+							Випадковий номер дня ${randomdayNumber}<br>
+							Сума ${sum}
+			
+							`)
+
+
+							console.log(randommonthNumber);
+
+						</script>
+					</div> 
+				</main> 
+
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>

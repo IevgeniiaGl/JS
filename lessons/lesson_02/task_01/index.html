@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Lesson 02</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №1</h1>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</div>
+							</li>
+							
+							
+						</ul>
+						<script>
+							//1. Вводимо необхiднi данi
+							let num1 = parseFloat (prompt('Введiть перше число', '0'))
+							let num2 = parseFloat (prompt('Введiть друге число', '0'))
+
+							//2. Знаходимо результат
+							let sum = num1 + num2
+							let multiply = num1 * num2
+							let division = num1/num2
+
+							//3.Виводимо резултат
+							document.write(`
+							<table class='table'>
+								<tr class='tr'>
+									<th class='th'>Шуканий результат</th> 
+									<th class='th'>Отримане значення</th> 
+								</tr>
+								<tr>
+									<th>Сума</th> 
+									<th>${sum}</th> 
+								</tr>
+								<tr>
+									<th>Добуток</th> 
+									<th>${multiply}</th> 
+								</tr>
+								<tr>
+									<th>Частка</th> 
+									<th>${division}</th> 
+								</tr>
+							
+							`)
+
+						</script>
+					</div> 
+				</div> 
+			</main> 
+
+
+		</div>
+		
+	</body>
+</html>

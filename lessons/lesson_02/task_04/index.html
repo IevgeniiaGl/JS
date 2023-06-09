@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Lesson 02</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №4</h1>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+							//1. Вводимо необхiднi данi
+							let lengthСentimeter = parseFloat (prompt('Введiть довжину у сантиметрах', '0'))
+							
+							//2. Знаходимо результат
+							let lengthMeter = lengthСentimeter / 100
+							let lengthKilometer = lengthMeter / 1000
+
+							//3.Виводимо результат
+							document.write(` 
+							${lengthMeter} метрiв <br>
+							${lengthKilometer} кілометрів
+							`)
+
+						</script>
+					
+					</div> 
+				</main> 
+
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>

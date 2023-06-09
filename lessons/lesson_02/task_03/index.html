@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Lesson 02</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №3</h1>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+							//1. Вводимо необхiднi данi
+							let price = parseFloat (prompt('Введiть вартість одиниці товару', '0'))
+							let quantity = parseInt(prompt('Введiть кількість товару', '0'))
+							const vatPercent = 5
+
+							//2. Знаходимо результат
+							let totalCost = price * quantity
+							let vat = totalCost/100 * vatPercent
+
+							//3.Виводимо результат
+							document.write(` 
+							Загальна вартість ${totalCost.toFixed(2)}грн <br>
+							ПДВ ${vat.toFixed(2)} грн
+							`)
+
+						</script>
+					
+					</div> 
+				</main> 
+
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
