@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 02</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №3</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+				
+							let minNumber = 1
+							let maxNumber = 5
+
+							//======================================
+
+							let randomNumber = minNumber + Math.floor(Math.random()*(maxNumber-minNumber+1))
+							let yourNumber = parseInt(prompt('Вгадайте число вiд 1 до 5'))
+							//= = = = = = = = = = = = = = = 
+							if (randomNumber !== yourNumber) {
+								alert(`Ви не вгадали! Загадане число ${randomNumber}! Спробуйте ще раз!`)
+							    let yourSecondNumber = parseInt(prompt('Друга спроба. Вгадайте число вiд 1 до 5'))
+										if (randomNumber !== yourSecondNumber) {
+										alert(`Ви не вгадали з другої спроби! правильне число ${randomNumber}`)
+										}
+										else {
+										alert(`УРА! Вы вгадали з другої спроби число ${randomNumber}`)
+										}
+							} else{
+									alert(`УРА! Вы вгадали з першої спроби число ${randomNumber}`)
+							}
+							
+						</script>
+					
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>

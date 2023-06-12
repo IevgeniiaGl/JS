@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 03</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №6</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</div>
+							</li>
+
+						
+							
+						</ul>
+						<script class = 'script'>
+							//1. Вводимо необхiднi данi
+
+							let placeNum = parseInt(prompt('Номер дня тижня', ''))
+							var result;
+
+
+							//2. Знаходимо результат
+
+								switch (placeNum) {
+    								case 1: result = 'Понедiлок';
+        								break;
+        							case 2: result = 'Вiвторок';
+        								break;
+        							case 3: result = 'Середа';
+        								break;
+									case 4: result = 'Четвер';
+        								break;
+        							case 5: result = 'П"ятниця';
+        								break;
+        							case 6: result = 'Субота';
+        								break;
+									case 7: result = 'Недiля';
+        								break;
+   								 	default:result = 'Не знайдено';
+        								break;
+										}
+
+									//3.Виводимо результат
+									alert(result);
+								
+						</script>
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>

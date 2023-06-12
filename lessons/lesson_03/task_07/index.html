@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 03</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Домашня робота №7</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__link">Задача №7</div>
+								<div class="item__text">З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+							//1. Вводимо необхiднi данi
+
+							let monthNum = parseInt(prompt('Введiть номер місяця?' ));
+
+							
+							//2. Знаходимо результат
+						
+							let result = (monthNum >2 && monthNum <=5) ? 'Весна' : 
+										 (monthNum >5 && monthNum <=8) ? 'Лiто' :
+										 (monthNum >8 &&monthNum <=11) ? 'Осень' :
+										'Зима!';
+
+							//3.Виводимо результат
+
+							alert( result );
+							
+						</script>
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>

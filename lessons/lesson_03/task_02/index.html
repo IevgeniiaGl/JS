@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 03</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №2</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								
+								<div class="item__text">З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.</div>
+							</li>
+						</ul>
+					
+							<script class = 'script'>
+
+								//===============================
+
+								let price = parseFloat(prompt('Цiна товару, грн', ''))
+								let money = parseFloat(prompt('Кількість грошей, грн', ''))
+
+								//================================
+
+									if (price > money) 
+									alert('У вас не вистачає грошей')
+									else
+    								alert('Купiть лотерею за 4 грн')
+
+
+							</script>
+						
+						
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>
