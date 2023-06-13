@@ -31,14 +31,16 @@
 							
 							//2. Знаходимо результат
 						
-							let result = (monthNum >2 && monthNum <=5) ? 'Весна' : 
+							let result = (monthNum ===12 || monthNum <=2) ? 'Зима' :
+										(monthNum >2 && monthNum <=5) ? 'Весна' : 
 										 (monthNum >5 && monthNum <=8) ? 'Лiто' :
-										 (monthNum >8 &&monthNum <=11) ? 'Осень' :
-										'Зима!';
+										 (monthNum >8 && monthNum <=11) ? 'Осiнь' :
+										 
+										'Невiрно введенi данi!';
 
 							//3.Виводимо результат
 
-							alert( result );
+							alert(result);
 							
 						</script>
 					</div> 
