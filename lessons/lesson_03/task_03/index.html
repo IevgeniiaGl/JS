@@ -24,25 +24,23 @@
 						</ul>
 						<script class = 'script'>
 				
-							let minNumber = 1
-							let maxNumber = 5
-							let randomNumber = minNumber + Math.floor(Math.random()*(maxNumber-minNumber+1))
+							const minNumber = 1
+							const maxNumber = 5
+							const randomNumber = minNumber + Math.floor(Math.random()*(maxNumber-minNumber+1))
 							let yourNumber = parseInt(prompt('Вгадайте число вiд 1 до 5'))
 							let result
 								//======================================
-							if (randomNumber !== yourNumber) {
-								result =`Ви не вгадали! Загадане число ${randomNumber}! Спробуйте ще раз!`
-							    let yourSecondNumber = parseInt(prompt('Друга спроба. Вгадайте число вiд 1 до 5'))
-										if (randomNumber !== yourSecondNumber) {
-										result =`Ви не вгадали з другої спроби! правильне число ${randomNumber}`
-										}
-										else {
-										result=`УРА! Вы вгадали з другої спроби число ${randomNumber}`
-										}
-							} else{
-									result = `УРА! Вы вгадали з першої спроби число ${randomNumber}`
-							}
-							alert( result )
+					
+							if (yourNumber===randomNumber)
+							result ='Ви вгадали!'
+							else {
+								yourNumber = parseInt(prompt('У вас друга спроба вгадати число вiд 1 до 5'))
+								if(yourNumber===randomNumber)
+									result ='Ви вгадали'
+								else
+									result =`Ви не вгадали з другої спроби! правильне число ${randomNumber}`
+							} 
+								alert( result )
 						</script>
 					
 					</div> 
