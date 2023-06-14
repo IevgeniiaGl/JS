@@ -28,17 +28,21 @@
 
 								//===============================
 
-								let price = parseFloat(prompt('Цiна товару, грн', ''))
-								let money = parseFloat(prompt('Кількість грошей, грн', ''))
-								let moneyRest = money - price
+								const price = parseFloat(prompt('Цiна товару, грн', ''))
+								const money = parseFloat(prompt('Кількість грошей, грн', ''))
 								let result
 
 								//================================
 
 									if (price > money) 
 									result ='У вас не вистачає грошей'
-									else
-    								result = `У вас залишилось ${moneyRest} грн. Ви можете купити лотерею за 4грн`
+									else{
+										result ='Ви купили товар'
+										let moneyRest = money - price
+										if(moneyRest >=4) 
+										result = `У вас залишилось ${moneyRest} грн. Ви можете купити лотерею за 4грн`
+									}
+    								
 									alert( result )
 
 							</script>
