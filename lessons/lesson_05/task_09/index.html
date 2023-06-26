@@ -24,7 +24,7 @@
 						</ul>
 						<script class = 'script'>
 						for (i = 1; i<=3; i++){
-    					    let userNum = parseInt(prompt(`Спроба № ${i} Введiть число`))
+    					    const userNum = parseInt(prompt(`Спроба № ${i} Введiть число`))
     					    const randomNum = 1 + Math.floor(Math.random()*10)
     					    if (userNum===randomNum) {
 								if(confirm('Ви вгадали'))
