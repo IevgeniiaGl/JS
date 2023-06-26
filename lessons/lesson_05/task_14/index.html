@@ -29,18 +29,18 @@
 							let userMoney 
 							while(productPrice > 0){
 
-								userMoney = parseInt(prompt(`введiть сумму для сплати`))
+								userMoney = parseInt(prompt('введiть сумму для сплати'))
 								productPrice = productPrice - userMoney
 								userMoney++
 
 								if (productPrice>0) {
-									alert(`Ви сплатили ${userMoney}. Вам залишилось до сплати ще ${productPrice}`)
+									alert(`Ви сплатили ${userMoney}.Вам залишилось до сплати ще ${productPrice}`)
 								}
 									else if(productPrice<0){
 			
 										 alert(`Вернуть ${0 -productPrice }`)
 									}
-									else 		alert(`Дякую за покупку`)
+									else 		alert('Дякую за покупку')
 									
 									
 								}
