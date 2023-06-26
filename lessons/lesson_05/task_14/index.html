@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 05</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №14</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести). </div>
+							</li>
+						</ul>
+						<script class = 'script'>
+
+							let productPrice = 1 + Math.floor(Math.random()*1000)
+							alert(`До сплати ${productPrice}`)
+							let userMoney 
+							while(productPrice > 0){
+
+								userMoney = parseInt(prompt(`введiть сумму для сплати`))
+								productPrice = productPrice - userMoney
+								userMoney++
+
+								if (productPrice>0) {
+									alert(`Ви сплатили ${userMoney}. Вам залишилось до сплати ще ${productPrice}`)
+								}
+									else if(productPrice<0){
+			
+										 alert(`Вернуть ${0 -productPrice }`)
+									}
+									else 		alert(`Дякую за покупку`)
+									
+									
+								}
+								
+						</script>
+					
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>

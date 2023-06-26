@@ -155,6 +155,7 @@ body {
 }
 .item__text {
   font-size: 1.25rem;
+  margin-bottom: 20px;
 }
 
 .table {
@@ -166,6 +167,11 @@ body {
 }
 
 .th {
+  padding: 0.625rem;
+  border: 1px solid #000;
+}
+
+td {
   padding: 0.625rem;
   border: 1px solid #000;
 }
@@ -183,3 +189,34 @@ body {
 .total {
   padding-top: 1.875rem;
 }
+
+.product{
+  width: 150px;
+  height: 40px;
+  border: 1px solid #000;
+}
+
+button{
+  display: block;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+button:hover{
+  border: 1px solid #df1616;
+}
+
+input{
+  width: 200px;
+  height: 30px;
+  border: 1px solid #000;
+  margin-left: 10px;
+}
+
+label{
+display: inline-block;
+width: 100px;
+}
+
+

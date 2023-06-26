@@ -1,0 +1,19 @@
+[class*=__container] {
+    max-width: 79.375rem;
+    margin: 0 auto;
+    padding: 0 0.9375rem;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    color: #282828;
+    background: #f3f3f3;
+  }
+  
+  .header__title {
+    font-size: 1.875rem;
+    font-weight: 600;
+  }

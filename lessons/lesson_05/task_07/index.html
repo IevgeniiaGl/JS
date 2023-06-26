@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 05</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Домашня робота №7</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__link">Задача №7</div>
+								<div class="item__text">Вивести на екран N абзаців (N вводиться користувачем) за зразком:</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+
+
+								let N = parseInt(prompt('введiть кiлькiсть абзаців'))
+
+								for (let header = 1; header <= N; header++) {
+									document.write(`<h1>Заголовок # ${header}</h1>`)
+									for (let chapter = 1; chapter <= header; chapter++) {
+										document.write(`<p>Роздiл # ${header} Параграф ${chapter}</p>`)	
+									}
+									document.write('<hr>')
+							}
+								
+								
+								
+
+
+    
+
+
+
+								
+								
+							
+						</script>
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>
