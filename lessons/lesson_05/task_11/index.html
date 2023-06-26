@@ -24,18 +24,35 @@
 						</ul>
 						<script class = 'script'>
 
-							let firstNum = parseInt(prompt('Перше число'))
-							let secondNum = parseInt(prompt('Друге число'))
-							let sum = 0;
-							let oddNum = 0;
+							//1 варiант
 
-							for (let num = firstNum; num <= secondNum && oddNum < 5 ; num++) {
+							// const minNum = parseInt(prompt('Перше число'))
+							// const maxNum = parseInt(prompt('Друге число'))
+							// let sum = 0;
+							// let oddNum = 0;
+
+							// for (let num = minNum; num <= maxNum && oddNum < 5 ; num++) {
 								
-								if (num % 2 !== 0) {
-									oddNum++
-									sum += num
+							// 	if (num % 2 !== 0) {
+							// 		oddNum++
+							// 		sum += num
+							// 	}
+								
+							// }
+							// document.write(`Результат ${sum}`)
+
+							// варiант
+
+							const minNum = parseInt(prompt('Перше число'))
+							const maxNum = parseInt(prompt('Друге число'))
+							let sum = 0;
+							for (let num = 0; num < 5; ) {
+								const randomNum = minNum + Math.floor(Math.random()*(maxNum-minNum + 1))
+
+								if (randomNum % 2 !==0) {
+									sum += randomNum
+									num++
 								}
-								
 							}
 							document.write(`Результат ${sum}`)
 							
