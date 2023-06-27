@@ -24,26 +24,30 @@
 						</ul>
 						<script class = 'script'>
 
-							const productPrice = 1 + Math.floor(Math.random()*1000)
+							let productPrice = 1 + Math.floor(Math.random()*1000)
 							alert(`До сплати ${productPrice}`)
-							let userMoney 
-							while(productPrice > 0){
+							let userMoney  
+							let i
 
-								userMoney = parseInt(prompt('введiть сумму для сплати'))
-								productPrice = productPrice - userMoney
-								userMoney++
 
-								if (productPrice>0) {
-									alert(`Ви сплатили ${userMoney}.Вам залишилось до сплати ще ${productPrice}`)
-								}
-									else if(productPrice<0){
-			
-										 alert(`Вернуть ${0 -productPrice }`)
-									}
-									else 		alert('Дякую за покупку')
-									
-									
-								}
+								do {
+									userMoney = parseInt(prompt('Введiть сумму для сплати'))
+									productPrice -= userMoney
+										if (productPrice > 0) {
+											alert(`Ви сплатили ${userMoney}.Вам залишилось до сплати ще ${productPrice}`)
+											i++
+										}
+										else if(productPrice < 0){
+											alert(`Дякую за покупку. Вiзьмiть здачу ${0 - productPrice }`)
+	   										}
+	   									else 		
+											alert('Дякую за покупку')
+										
+										} 
+								while (productPrice > 0);
+
+
+
 								
 						</script>
 					

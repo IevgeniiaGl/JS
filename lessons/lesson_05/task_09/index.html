@@ -23,16 +23,23 @@
 							</li>
 						</ul>
 						<script class = 'script'>
+
 						const userNum = parseInt(prompt('Загадайте число'))
+
 						for (i = 1; i<=3; i++){
     					    const randomNum = 1 + Math.floor(Math.random()*10)
-    					    if (userNum===randomNum) {
-								alert(`Вiн вгадав число ${userNum}`)
-								break
-							}
-							else confirm(` Комп’ютер думає що ви загадали. ${randomNum}.`)
-								alert( 'Вiн помилився. У нього ще одна спроба')
+							confirm(`Це число ${randomNum}?`)
+    					    	if (userNum===randomNum) {
+									alert(`Комп’ютер вгадав число ${userNum}`)
+									break
+								}
+								else 
+								alert('Комп’ютер не вгадав')
     					}
+
+
+
+
 						</script>
 					
 					</div> 

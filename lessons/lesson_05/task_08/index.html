@@ -24,22 +24,19 @@
 						</ul>
 						<script class = 'script'>
 
-								let i = 1
-								let userNum
-								const randomNum = 1 + Math.floor(Math.random()*10)
-								while(userNum!==randomNum){
-								userNum = parseInt(prompt(`Спроба № ${i} Введiть число `))
-								i++
-								if (userNum===randomNum) {
-								if(confirm('Ви вгадали'))
-								alert('Вiтаю')
-								}
-								else alert('Не вгадали')
-								}
-					
-							
+							const userNum = parseInt(prompt('Введiть число'))
+							let randomNum
+							do {
+								randomNum = 1 + Math.floor(Math.random()*10)
+								confirm(`Це число ${randomNum}?`)
+									if (userNum===randomNum) 
+										alert('Комп’ютер вгадав')
+									else 
+										alert('Комп’ютер не вгадав')
+								} 
+							while (userNum!==randomNum);
+
 						</script>
-					
 					</div> 
 				</main> 
 
