@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 05</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №09</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">Інвестор вклав S тис. грн на 20 років під 20% річних. Визначити за допомогою циклів суму, яку він одержить (без оподаткування).</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+
+						let sum = parseInt(prompt(`Cума вкладу`))
+							let profit=0
+							let rate = 20/100
+	
+
+							for (let year = 0; year < 20; year++) {
+								profit = profit+sum*rate;
+
+								
+								
+								
+							}
+							alert( `сума доходу ${profit} , на рахунку ${profit+sum}`)
+
+
+
+						</script>
+					
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>

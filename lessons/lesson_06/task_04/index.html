@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 05</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №2</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<div class="item__text">Знайти суму всіх непарних чисел з діапазону, який вводить користувач з клавіатури.</div>
+							<script class = 'script'>
+                                
+					const minNum = parseInt(prompt('Перше число'))
+					const maxNum = parseInt(prompt('Друге число'))
+					
+					let sum=0
+					
+					for (let i = minNum; i <= maxNum; i++){
+					
+						if (i % 2 !== 0) {
+							document.write(`${i}<br>`)
+							sum+=i	
+						}
+					}
+					document.write(` Сумма ${sum}`)
+							</script>
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>
