@@ -5,13 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="../../css/style.css">
-		<title>Lesson 06</title>
+		<title>Lesson 07</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__container">
-				<h1 class="header__title">Задача №22</h1>
+				<h1 class="header__title">Задача №2</h1>
 				</div>
 			</header>
 			<main class="main">
@@ -19,20 +19,30 @@
 					<div class="page__container">
 						<ul class="page__list">
 							<li class="page__item item">
-								<div class="item__text">Введіть з клавіатури 10 пар чисел. Порівняйте числа у кожній парі та надрукуйте більше з них.</div>
+								<div class="item__text">Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим </div>
 							</li>
 						</ul>
 						<script class = 'script'>
 
-							for (let index = 0; index < 10; index++) {
-							const firstNum = parseInt(prompt('Перше число'))
-							const secondNum = parseInt(prompt('Друге число'))
-							if (firstNum > secondNum) 
-								document.write(`${firstNum}<br>`)
-								else document.write(` ${secondNum}<br>`)
+							function getWorkDay(dayNum){
+   let result
+
+if ( dayNum >=1 && dayNum <=5 ) 
+result = "Це робочий день тижня"
+else  if ( dayNum >5 && dayNum <=7) 
+result = "Це вихiдний день тижня"
+
+else result = "Помилка"
+  return result
+} 
+
+ const userDayNum = parseInt(prompt('Номер дня'))     
+ alert( getWorkDay(userDayNum))
+
+
 								
-						}
 						</script>
+					
 					</div> 
 				</main> 
 

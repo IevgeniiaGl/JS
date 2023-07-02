@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 07</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №3</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+						<ul class="page__list">
+							<li class="page__item item">
+								<div class="item__text">.Створити окремі функції, які для 4 чисел знаходять:
+									суму;
+									добуток;
+									середнє арифметичне;
+									мінімальне значення. 
+									</div>
+							</li>
+						</ul>
+						<script class = 'script'>
+
+						function getNumSum (num1,num2,num3,num4) {
+return  num1+ num2 + num3 + num4
+}
+function getNumProduct (num1,num2,num3,num4) {
+return  num1*num2*num3*num4
+}
+function getNumAvarage (num1,num2,num3,num4) {
+return   (num1+ num2 + num3 + num4)/4
+}
+
+function getNumMax (num1,num2,num3,num4) {
+return (Math.min(num1,num2, num3, num4))
+}
+
+const userNum1 = parseInt(prompt(`Перше число`))
+const userNum2 = parseInt(prompt(`Друге число`))
+const userNum3 = parseInt(prompt(`Трете число`))
+const userNum4 = parseInt(prompt(`Четверте число`))
+
+document.write( `Ви ввели ${userNum1},  ${userNum2},  ${userNum3},  ${userNum4}<br>`)
+
+document.write( `Cума ${getNumSum(userNum1,userNum2,userNum3,userNum4)}<br>`)
+document.write( `Добуток ${getNumProduct(userNum1,userNum2,userNum3,userNum4)}<br>`)
+document.write( `Cереднє арифметичне ${getNumAvarage(userNum1,userNum2,userNum3,userNum4)}<br>`)
+document.write( `Менше з чисел ${getNumMax(userNum1,userNum2,userNum3,userNum4)}`)
+
+
+
+
+						</script>
+					
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>
