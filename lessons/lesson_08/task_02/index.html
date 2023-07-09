@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 08</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №2</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<div class="item__text">Дано масив, який зберігає кількість відвідувачів магазину протягом тижня. Вивести на екран:<br>
+								номери днів, протягом яких кількість відвідувачів була меншою за 20;<br>
+								номери днів, коли кількість відвідувачів була мінімальною;<br>
+								номери днів, коли кількість відвідувачів була максимальною;<br>
+								загальну кількість клієнтів у робочі дні та окремо загальну кількість днів на вихідних..</div>
+							<script class = 'script'>
+
+
+function inputClients(){
+    let clients = [] // создаем массив
+for (let i = 0; i < 7; i++) {// 
+   let clientsInDay = parseInt(prompt(`Сколько людей было в день № ${i+1}`))
+   clients.push(clientsInDay)
+ 
+}
+return clients
+}
+
+
+//номери днів, протягом яких кількість відвідувачів була меншою за 20;
+
+function getClientsNumLessThan20(clients){
+    let clientsNumLessThan20 = []
+    for (let i = 0; i < clients.length; i++) {
+      if (clients[i]<20) clientsNumLessThan20.push(i+1) 
+    }
+    return clientsNumLessThan20
+}
+
+
+//знах мiнiмальне число;
+
+function getMinClients(clients) {
+    let minClients = clients[0]
+    for (let i = 1; i <= clients.length; i++) { // як змiнюються номери
+       if (minClients>clients[i]) minClients=clients[i]
+    }
+    return minClients
+}
+
+//знах максимальне число;
+
+function getMaxClients(clients) {
+    let maxClients = clients[0]
+    for (let i = 1; i <= clients.length; i++) { // як змiнюються номери
+       if (minClients<clients[i]) maxClients=clients[i]
+    }
+    return maxClients
+}
+
+// номери днів, коли кількість відвідувачів була мiнiмальною;
+
+function getMinClientsDay(minClients, clients) {
+    let minClientsDay = []
+    for (let i = 0; i < clients.length; i++) { 
+       if (clients[i]===minClients)  minClientsDay.push(i+1) 
+    }
+    return minClientsDay
+}
+
+// номери днів, коли кількість відвідувачів була максимальною;
+
+function getMaxClientsDay(maxClients, clients) {
+    let maxClientsDay = []
+    for (let i = 0; i < clients.length; i++) { 
+       if (clients[i]===maxClients)  maxClientsDay.push(i+1) 
+    }
+    return maxClientsDay
+}
+
+//загальну кількість клієнтів у робочі дні.
+function getSumClientsInWorkDays(clients) {
+    let sum = 0
+    for (let i = 0; i < 5; i++) { 
+        sum+=clients[i]
+    }
+    return sum
+}
+
+//загальну кількість клієнтів на вихідних.
+function getSumClientsInWeekEnd (clients) {
+    let sum = 0
+    for (let i = 5; i < 7; i++) { 
+        sum+=clients[i]
+    }
+    return sum
+}
+
+
+/////////////////
+let clients = inputClients()
+let clientsLessThan20 = getClientsNumLessThan20(clients)
+let minClients = getMinClients(clients)
+let minClientsDay = getMinClientsDay(minClients,clients)
+let maxClients = getMaxClients(clients)
+let maxClientsDay = getMaxClientsDay(maxClients,clients)
+let sumClientsInWorkDays =  getSumClientsInWorkDays(clients)
+let sumClientsInWeekEnd =  getSumClientsInWeekEnd(clients)
+
+/////////////
+document.write(`Всього відвідувачів ${clients}<br>` )
+document.write(`У днi ${clientsLessThan20} кількість відвідувачів була меншою за 20 <br>` )
+document.write(`У ${minClientsDay} дeнь  кількість відвідувачів була мiнiмальною <br>` )
+document.write(`У ${maxClientsDay} дeнь  кількість відвідувачів була максимальною <br>` )
+document.write(`Загальна кількість клієнтів у робочі дні ${sumClientsInWorkDays}<br>` )
+document.write(`Загальна кількість клієнтів на вихідних ${sumClientsInWeekEnd}<br>` )
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>

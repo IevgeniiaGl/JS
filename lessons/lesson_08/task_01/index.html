@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 08</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №2</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<div class="item__text">ДДано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка))</div>
+							<script class = 'script'>
+
+
+
+
+function inputScores(k) {
+    let scores = [] 
+    for (let i = 0; i < k; i++) {
+    let studentsScore = parseInt(prompt( `Введiть оцінку з ${i+1} предмету`))
+    scores.push(studentsScore)
+}
+return scores
+}
+
+
+
+function getAvarageScores(scores) {
+    let sum = 0
+    let counter = 0
+    for (let i = 0; i < scores.length; i++) {
+        sum += scores[i]
+        counter++
+    }
+    return sum/counter
+}
+
+
+function getMinValue(scores) {
+    let minScore = scores[0]
+    for (let i = 1; i <= scores.length; i++) { 
+       if (minScore > scores[i]) { 
+        minScore=scores[i]
+       }
+    }
+    return minScore
+}
+
+
+
+function getCategory(minScore) {
+    let res
+    if (minScore===2) res ='двійочник'
+    else if (minScore===3) res ='трйочник'
+    else if (minScore===4) res ='хорошист'
+    else if (minScore===5) res ='Вiдмiнник'
+        return res
+    }
+
+
+let k = parseInt(prompt('скiльки всього предметiв')) 
+let scores = inputScores(k)
+let minScore = getMinValue(scores)
+let category = getCategory(minScore)
+let avarageScore = getAvarageScores(scores)
+document.write(  `Всi оцінки = ${scores} <br>`)
+document.write(  `Середнiй бал = ${avarageScore.toFixed(2)}<br>`)
+document.write( category)
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>

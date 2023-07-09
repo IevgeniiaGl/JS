@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 08</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №3</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<div class="item__text">Дано послідовність оцінок учня. Підрахувати кількість:<br>
+								двійок<br>
+								кількість хороших оцінок (добре, відмінно)<br>
+								кількість оцінок, які нижче середнього.<br></div>
+							<script class = 'script'>
+function inputScores(scoresNum) {
+    let scores = [] 
+for (let i = 0; i < scoresNum; i++) {
+   let studentsScore = parseInt(prompt( 'Введiть оцінку'))
+   scores.push(studentsScore)
+}
+return scores
+}
+
+function getAvarageScores(scores) {
+    let sum = 0
+    let counter = 0
+    for (let i = 0; i < scores.length; i++) {
+        sum += scores[i]
+        counter++
+    }
+    return sum/counter
+}
+
+function getScore2(scores) {
+    let count=0
+    for (let i = 0; i <= scores.length; i++) { 
+       if (scores[i]===2) count++
+    }
+    return count
+}
+
+function getGoodScore(scores) {
+    let count=0
+    for (let i = 0; i <= scores.length; i++) { 
+       if (scores[i]===4 || scores[i]===5) count++
+    }
+    return count
+}
+
+function getLessThanAvarage(scores) {
+    let count=0
+    for (let i = 0; i <= scores.length; i++) { 
+       if (scores[i]<avarageScore) count++
+    }
+    return count
+}
+
+
+let scoresNum = parseInt(prompt('скiльки всього оцінок')) 
+let scores = inputScores(scoresNum) 
+let avarageScore = getAvarageScores(scores)
+let score2 = getScore2(scores)
+let goodScore = getGoodScore(scores)
+document.write( `Введені оцінки = ${scores}<br>`)
+document.write(  `Середнiй бал = ${avarageScore.toFixed(2)}<br>`)
+document.write(  `Kількість двійок = ${getScore2(scores)}<br>`)
+document.write(  `Kількість хороших оцінок (добре, відмінно) = ${getGoodScore(scores)}<br>`)
+document.write(  `Kількість кількість оцінок, які нижче середнього = ${getLessThanAvarage(scores)}<br>`)
+
+ 
+							</script>
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>

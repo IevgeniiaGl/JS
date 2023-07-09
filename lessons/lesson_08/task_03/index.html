@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 08</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача №3</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<div class="item__text">. Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».</div>
+							<script class = 'script'>
+
+
+ function inputNames(namesNum) {
+    let names = [] //создаем пустой массив
+for (let i = 0; i < namesNum; i++) {
+   let studentName = prompt('Введiть ім’я')
+   names.push(studentName)
+}
+return names
+}
+
+function getStudentsNames (names) {
+    let nameCount = 0
+    for (let i = 0; i < names.length; i++) {
+        if (names[i] === nameIvan) nameCount++
+  }
+  return nameCount 
+}
+let nameIvan = 'Іван'
+let namesNum = parseInt(prompt('Cкiльки всього iмен')) 
+let names = inputNames(namesNum)
+let count = getStudentsNames (names)
+document.write(`Введенi iмена ${names}<br>` )
+document.write(`Iм’я «Іван» зустрічається ${count} рази` )
+
+							</script>
+					</div> 
+				</main> 
+
+		</div>
+	</body>
+</html>
