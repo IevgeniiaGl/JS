@@ -19,12 +19,12 @@
 					<div class="page__container">
 							<div class="item__text">Дано масив елементів. Усі елементи, які більші за перший елемент помножити на 2</div>
 							<script class = 'script'>
+								let arr = [5,2,6,3,10,4,20]
+								arr.forEach((num,ind,arr)=>{
+    							if(num>arr[0]) arr[ind]*=2
+								})
+								document.write(arr)
 
-prices.forEach(
-    (price,ind,arr) => {
-    if (price>1000) arr[ind]-=arr[ind]/100*30
-})
-document.write( `${prices}<br>`)
 
 
 

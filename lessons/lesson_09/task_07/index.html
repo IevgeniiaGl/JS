@@ -19,13 +19,13 @@
 					<div class="page__container">
 							<div class="item__text">Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.</div>
 							<script class = 'script'>
-let prices = [2200,1500,225,3000,457,144]
+							let prices = [2200,1500,225,3000,457,144]
 
-prices.forEach(
-    (price,ind,arr) => {
-    if (price>1000) arr[ind]-=arr[ind]/100*30
-})
-document.write( `${prices}<br>`)
+							prices.forEach(
+    						(price,ind,arr) => {
+    						if (price>1000) arr[ind]-=arr[ind]/100*30
+							})
+							document.write( `${prices}<br>`)
 
 
 
