@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 09</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<div class="item__text">Дано історію цін на цінні папери за деякий період (згенерувати від 1 до 10000)</div>
+							<script class = 'script'>
+                                
+								let usersNum = parseInt(prompt('Перiод, мiс?'))
+let prices = []
+for (let i = 0; i < usersNum; i++) {
+  let price = 1 + Math.floor(Math.random()*(10000-1+1))
+  prices.push(price)
+}
+document.write( ` Массив цін = [ ${prices} ] <br> `)
+document.write( '<br>')
+
+ // 1)Сформувати новий масив, у якому є тільки ті, що більші за 1000 грн.
+
+let pricesMoreThan1000 = prices.filter(
+ (price => price>1000)
+)
+document.write( `1) Массив цін що більші за 1000 грн = [ ${pricesMoreThan1000} ] <br> `)
+document.write( '<br>')
+
+//4. Сформувати новий масив, що міститиме значення цін у відсотках стосовно максимального
+
+let max = Math.max(...prices)
+let pricesInPercents = prices.map((price)=> price/max*100)
+let newPricesForPrint = pricesInPercents.map((price) => price.toFixed(2))
+document.write( `4) Максимальне число = ${max}, Массив в % стосовно максимального = [ ${newPricesForPrint} ] <br>`)
+document.write( '<br>')
+
+//6.  Визначити, чи є ціна, що менше 1000 
+
+if(prices.some(price => price<1000))
+document.write( '6) Так, є ціна, що менше 1000 <br>')
+else document.write('6) Нi,немає ціни, що менше 1000 <br>')
+document.write( '<br>')
+
+//7.Визначати, чи усі ціни більше за 1000 
+if(prices.every(price => price>1000))
+document.write( '7) Так, усі ціни більше за 1000 <br>')
+else document.write('7) Нi, не усі ціни більше за 1000 <br>')
+document.write( '<br>')
+
+//8.Підрахувати кількість цін, що більше за 1000 
+
+let countMoreThan1000 = prices.reduce(
+  (prevCount1000,el) => el>1000 ? prevCount1000+1 : prevCount1000,0)
+document.write( `8) Кількість цін, що більше за 1000 = ${countMoreThan1000} <br>`)
+document.write( '<br>')
+
+//9. Підрахувати суму цін, що більше за 1000 
+
+let sum = prices.reduce(
+(prevSum,el) => el > 1000 ? prevSum + el : prevSum,0)
+document.write( `9) Cума цін, що більше за 1000 = ${sum} <br>`)
+document.write( '<br>')
+
+
+//10. Знайти першу ціну, що більше за 1000 
+
+let firstPriceMoreThan1000 = prices.find((price)=>price>1000)
+document.write(   `10) Перша ціна, що більше за 1000 = ${firstPriceMoreThan1000} <br>`)
+document.write( '<br>')
+
+
+//11. Знайти індекс першої ціни, що більше за 1000
+let firstIndexMoreThan1000 = prices.findIndex((el) => el > 1000)
+
+document.write(  `11) Iндекс першої ціни, що більше за 1000 = ${firstIndexMoreThan1000}<br>` )
+document.write( '<br>')
+
+
+//12. Знайти останню ціну, що більше за 1000
+
+let lastPriceMoreThan1000 = prices.findLast((price)=>price>1000)
+document.write(  `12) Oстання ціна, що більше за 1000  = ${lastPriceMoreThan1000}  <br>`  )
+document.write( '<br>')
+
+
+//13. Знайти індекс останньої ціни, що більше за 1000
+
+let lastIndexMoreThan1000 = prices.findLastIndex((el) => el > 1000)
+
+document.write(   `13) Iндекс останньої ціни, що більше за 1000 = ${lastIndexMoreThan1000}`)
+
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>
