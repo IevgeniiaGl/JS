@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 11</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача 2</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<!-- <div class="item__text">Дано інформацію про прибуток К магазинів протягом тижня<br>
+								1. загальний прибуток кожного масиву за тиждень; <br>
+								2. загальний прибуток кожного масиву за тиждень; <br>
+								3. загальний прибуток кожного масиву за тиждень; <br>
+								4. загальний прибуток кожного масиву за тиждень; <br>
+								5. загальний прибуток кожного масиву за тиждень; <br>
+							</div> -->
+							<script class = 'script'>
+
+                                
+
+let rowsNumber = parseInt(prompt('Кiлькiсть магазинiв'))
+let columnsNumber = 7
+
+// //..................................................................................
+
+function getRandomNum(minValue, maxValue) {
+  return minValue + Math.floor(Math.random () * (maxValue - minValue +1) )
+}
+
+//..................................................................................
+
+function getRandomArray(arrayLength,minValue, maxValue) {
+  const arr = []
+  for (let i = 0; i < arrayLength; i++) {
+    const randomNum = getRandomNum(minValue, maxValue)
+    arr.push(randomNum)
+  }
+  return arr
+}
+
+//..................................................................................
+
+function generateRandomTable(rowsNumber, columnsNumber, minValue, maxValue) {
+  const table = []
+  for (let i = 0; i < rowsNumber; i++) {
+    const randomRow = getRandomArray(columnsNumber, minValue, maxValue)
+    table.push(randomRow)
+  }
+  return table 
+}
+
+let randomTable = generateRandomTable (rowsNumber,columnsNumber,1,1000) 
+document.write( `Створений двухвимiрний масив <br> ${randomTable}`)
+document.write( `<br>`)
+console.log(randomTable)
+
+
+//1. Знайти загальний прибуток кожного масиву за тиждень.............................
+
+function getSumPerWeek(randomTable) {
+const sumArr =[]
+for (let rowsIndex = 0;rowsIndex < randomTable.length; rowsIndex++) {
+  let sum = 0  
+  for (let  columnsIndex = 0;  columnsIndex < randomTable[rowsIndex].length;  columnsIndex++) {
+    sum+=randomTable[rowsIndex][columnsIndex]
+  }
+  sumArr.push(sum)
+}
+return sumArr
+}  
+let sumShop =  getSumPerWeek(randomTable)
+document.write( `1. Знайти загальний прибуток кожного масиву за тиждень <br> ${sumShop}`)
+document.write( `<br>`)
+
+
+//2. Загальний прибуток за робочі дні.............................
+
+function getSumPerWorkingDays(randomTable){
+const sumArrPerWorkingDays =[]
+for (let rowsIndex = 0;rowsIndex < randomTable.length; rowsIndex++) {
+  let sum = 0 
+  let workingDays = 5
+  for (let  columnsIndex = 0;  columnsIndex < workingDays;  columnsIndex++) {
+    sum+=randomTable[rowsIndex][columnsIndex]
+  }
+  sumArrPerWorkingDays.push(sum)
+}
+return sumArrPerWorkingDays
+}  
+let sumShopPerWorkingDays = getSumPerWorkingDays(randomTable)
+document.write( `2. Загальний прибуток за робочі дні <br> ${sumShopPerWorkingDays}`)
+document.write( `<br>`)
+
+
+
+// 3. Загальний прибуток за вихідні дні.............................
+
+function getSumPerWeekEnd(randomTable){
+const sumPerWeekEnd =[]
+for (let rowsIndex = 0;rowsIndex < randomTable.length; rowsIndex++) {
+  let sum = 0 
+  let weekEnd = 6
+  for (let  columnsIndex = 5;  columnsIndex <= weekEnd;  columnsIndex++) {
+    sum+=randomTable[rowsIndex][columnsIndex]
+  }
+  sumPerWeekEnd.push(sum)
+}
+return sumPerWeekEnd
+}  
+let sumPerWeekEnd = getSumPerWeekEnd(randomTable)
+document.write( `3. Загальний прибуток за вихідні дні <br> ${sumPerWeekEnd}`)
+document.write( `<br>`)
+
+           
+// 4. Cформувати загальний список (одновимірний масив) зі значенням, які що більші за 200.............................
+
+let newArrMoreThan200 = []
+for (let rowsIndex = 0;rowsIndex < randomTable.length; rowsIndex++) {
+  for (let  columnsIndex = 0;  columnsIndex < randomTable[rowsIndex].length;  columnsIndex++){
+  if (randomTable[rowsIndex][columnsIndex] > 200) newArrMoreThan200.push(randomTable[rowsIndex][columnsIndex])
+  }  }
+document.write( `4. Новый массив зі значенням, які що більші за 200 = [ ${newArrMoreThan200}]`)
+document.write( `<br>`)
+
+
+// 5.  Формувати загальний список (одновимірний масив) зі значенням, які що більші за 200.............................
+let newArrWednesday = []
+let indexOfWednesday = 3
+for (let rowsIndex = 0;rowsIndex < randomTable.length; rowsIndex++) {
+  for (let  columnsIndex = indexOfWednesday - 1;  columnsIndex < indexOfWednesday;  columnsIndex++){
+    newArrWednesday.push(randomTable[rowsIndex][columnsIndex])
+  }  }
+let bigBumInWednesday = Math.max(...newArrWednesday);
+
+document.write( `5. Найбiльше число середи = ${bigBumInWednesday}`)
+
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>
