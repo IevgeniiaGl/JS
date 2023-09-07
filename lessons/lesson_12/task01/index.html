@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 12</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача 1</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<script class = 'script'>
+// Дано масив 30 випадкових цілих чисел. Підрахувати скільки було обмінів під час сортування бульбашкою
+
+
+let arr = []
+for (let i = 0; i < 30; i++) {
+  let num = 1 + Math.floor(Math.random()*(100-1+1))
+  arr.push(num)
+}
+
+document.write(`Початковий масив ${arr}`)
+document.write('<br>')
+document.write('<br>')
+
+
+let changed 
+let count = 0
+do{
+  changed = false
+  for (let i = 1; i < arr.length; i++) 
+  {
+    if (arr[i-1] > arr[i] ) {
+      let tmp = arr[i-1];
+      arr[i-1] = arr[i]
+      arr[i] = tmp
+      changed = true;
+      count++
+      document.write(arr)
+      document.write('<br>')
+
+    }
+  }
+}
+while (changed)
+document.write('<br>')
+document.write(`Кiлькiсть змiн ${count}`)          
+
+
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>

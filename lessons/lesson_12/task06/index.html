@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 12</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача 6</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<script class = 'script'>
+
+//Задача 6. Дано масив імен. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я довжиною 5 символів і під яким індексом.
+
+let names = ["Paul", "Olga", "Igor", "Anna", "Petro", 'Illa', 'Vita',]
+document.write( `Масив iмен [${names}]`)
+document.write('<br>')
+let sortNames = names.sort() 
+let sortArr = names.sort((name1,name2)=>name1.length - name2.length) 
+document.write( `Вiдсортований масив [${sortNames}]`)
+document.write('<br>')
+function findLength5(arr, searchName){
+  let start = 0
+  let end = names.length - 1
+  while (start<= end){
+    const middle = Math.floor((start + end) / 2)
+    if (arr[middle].length === searchName) return middle  
+    if (arr[middle].length < searchName) start = middle + 1
+    if (arr[middle].length > searchName) start = middle - 1
+  }
+  return -1
+}
+let resultName = findLength5(names,5)
+if (resultName !== -1) document.write( `В масивi є ім’я довжиною 5 символів під індексом ${resultName}`)
+else document.write( 'нi')
+                                
+
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>

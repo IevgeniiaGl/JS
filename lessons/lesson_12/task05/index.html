@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 12</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача 5</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<script class = 'script'>
+
+//Задача 5. Дано масив імен. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я «Olga» і під яким індексом.
+
+let names = ["Paul", "Igor", "Anna","Petro", "Anton", "Olga", "Illa", "Alina", "Vita",]
+document.write( `Масив iмен [${names}]`)
+document.write('<br>')
+
+let sortNames = names.sort() 
+document.write( `Вiдсортований масив [${sortNames}]`)
+document.write('<br>')
+
+
+function findName(arr,searchName){
+  let start = 0
+  let end = arr.length - 1
+  while (start <= end){
+    const middle = Math.floor((start + end) / 2)
+    if (arr[middle] === searchName) return middle 
+    if (arr[middle] < searchName) start = middle + 1
+    if (arr[middle] > searchName) end = middle - 1
+  }
+  return -1
+}
+
+let res = findName(sortNames,"Olga")
+
+if (res !== -1) document.write( `Olga входить в массив пiд номером ${res}`)
+else document.write( 'Olga не входить в массив')
+
+                                
+
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>

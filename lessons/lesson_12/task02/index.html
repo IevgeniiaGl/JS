@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/style.css">
+		<title>Lesson 12</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+				<h1 class="header__title">Задача 2</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="page">
+					<div class="page__container">
+							<script class = 'script'>
+//Дано масив 30 випадкових цілих чисел. Підрахувати скільки було обмінів під час сортування змішуванням.
+
+
+let arr = []
+for (let i = 0; i < 30; i++) {
+  let num = 1 + Math.floor(Math.random()*(100-1+1))
+  arr.push(num)
+}
+
+document.write(`Початковий масив ${arr}`)
+document.write('<br>')
+document.write('<br>')
+
+function swap(A,i,j) {
+  let temp = A[i]
+  A[i] = A[j]
+  A[j] = temp
+  
+}
+
+let count = 0
+
+let leftIndex = 0
+let rightIndex = arr.length - 1 
+while (leftIndex < rightIndex){
+
+for (let index = leftIndex; index < rightIndex; index++) {
+    if (arr[index] > arr[index + 1] ) {
+      swap(arr, index,index+1)
+      count++
+      document.write(arr)
+      document.write('<br>')
+    }
+  }
+rightIndex--
+
+
+for (let index = rightIndex; index > leftIndex; index--) {
+  if (arr[index] < arr[index-1]){
+    swap(arr, index, index-1)
+    count++
+    document.write(arr)
+    document.write('<br>')
+  }
+  
+}
+leftIndex++
+}
+
+document.write('<br>')
+document.write(`Кiлькiсть змiн ${count}`)
+
+                                
+
+
+
+
+							</script>
+					</div> 
+				</div>
+				</main> 
+
+		</div>
+	</body>
+</html>
